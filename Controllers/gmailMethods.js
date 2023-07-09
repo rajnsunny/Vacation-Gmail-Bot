@@ -28,8 +28,9 @@ const getUnrepliesMessage = async (auth) => {
  * 
  * @param {*} auth stores the details of the authentication after the Login conpleted
  * @param {*} message particular mail i.e. remains unseen.
+ * @param {*} labelId Id of the the particular label
  */
-const sendReplytoEmail = async (auth,message) => {
+const sendReplytoEmail = async (auth,message,labelId) => {
     const gmail = google.gmail({version: "v1", auth});
     const messageData = await gmail.users.messages.get({
         auth,
@@ -63,7 +64,7 @@ const sendReplytoEmail = async (auth,message) => {
                     MESSAGE                                                                                                //Message to be send in the auto respond
                     ).toString("base64"),
                 },
-            };}
+            };
             
         await gmail.users.messages.send(replyMesage);                                                                      //Send the reply message to the mail came from.                                                                       
 
@@ -78,6 +79,7 @@ const sendReplytoEmail = async (auth,message) => {
             },
         });
     }
+}
 
 
 /**

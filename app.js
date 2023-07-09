@@ -50,7 +50,7 @@ app.get("/", async (req,res) => {
             console.log(`No of unrepplied messages : ${messages.length}`)
             if(messages && messages.length > 0){
                 for(const message of messages){
-                    await sendReplytoEmail(auth,message);
+                    await sendReplytoEmail(auth,message,labelId);
                 }
                     
             }
