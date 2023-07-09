@@ -1,0 +1,30 @@
+{
+  "name": "vacation-gmail-bot",
+  "version": "1.0.0",
+  "description": "A bot for give reply on behalf of you while you are on vacation or not available for unseen emails.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajnsunny/Vacation-Gmail-Bot.git"
+  },
+  "keywords": [
+    "Gmail_bot"
+  ],
+  "author": "Sunny Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajnsunny/Vacation-Gmail-Bot/issues"
+  },
+  "homepage": "https://github.com/rajnsunny/Vacation-Gmail-Bot#readme",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^120.0.0",
+    "nodemon": "^2.0.22"
+  }
+}
